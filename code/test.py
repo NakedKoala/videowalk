@@ -198,7 +198,7 @@ if __name__ == '__main__':
     print('Context Length:', args.videoLen, 'Image Size:', args.imgSize)
     print('Arguments', args)
 
-    # vis = None
+    vis = None
     # if args.visdom:
     #     import visdom
     import wandb
