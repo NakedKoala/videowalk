@@ -181,12 +181,12 @@ def test(loader, model, args):
                 coordpath = os.path.join(args.save_path, str(vid_idx) + '.dat')
                 np.stack(keypts, axis=-1).dump(coordpath)
             
-            if vis:
-                wandb.log({'blend vid%s' % vid_idx: wandb.Video(
-                    np.array([m[0] for m in maps]).transpose(0, -1, 1, 2), fps=12, format="gif")})  
-                wandb.log({'plain vid%s' % vid_idx: wandb.Video(
-                    imgs_orig[0, n_context:].numpy(), fps=4, format="gif")})  
-                
+            
+            wandb.log({'blend vid%s' % vid_idx: wandb.Video(
+                np.array([m[0] for m in maps]).transpose(0, -1, 1, 2), fps=12, format="gif")})  
+            wandb.log({'plain vid%s' % vid_idx: wandb.Video(
+                imgs_orig[0, n_context:].numpy(), fps=4, format="gif")})  
+            
             torch.cuda.empty_cache()
             print('******* Vid %s TOOK %s *******' % (vid_idx, time.time() - t_vid))
 
