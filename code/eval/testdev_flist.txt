@@ -1,4 +1,4 @@
-/content/hockey/JPEGImages/480p/scene1 /content/hockey/Annotations/480p/scene1
-/content/hockey/JPEGImages/480p/scene2 /content/hockey/Annotations/480p/scene2
-/content/hockey/JPEGImages/480p/scene3 /content/hockey/Annotations/480p/scene3
-/content/hockey/JPEGImages/480p/scene4 /content/hockey/Annotations/480p/scene4
+/content/hockey/JPEGImages/scene1 /content/hockey/Annotations/scene1
+/content/hockey/JPEGImages/scene2 /content/hockey/Annotations/scene2
+/content/hockey/JPEGImages/scene3 /content/hockey/Annotations/scene3
+/content/hockey/JPEGImages/scene4 /content/hockey/Annotations/scene4
