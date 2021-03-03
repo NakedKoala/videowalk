@@ -182,11 +182,11 @@ class CRW(nn.Module):
         #################################################################
         # Visualizations
         #################################################################
-        if (np.random.random() < 0.02) and (self.vis is not None): # and False:
-            with torch.no_grad():
-                self.visualize_frame_pair(x, q, mm)
-                if _N > 1: # and False:
-                    self.visualize_patches(x, q)
+        # if (np.random.random() < 0.02) and (self.vis is not None): # and False:
+        #     with torch.no_grad():
+        #         self.visualize_frame_pair(x, q, mm)
+        #         if _N > 1: # and False:
+        #             self.visualize_patches(x, q)
 
         loss = sum(xents)/max(1, len(xents)-1)
         

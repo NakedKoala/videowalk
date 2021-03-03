@@ -86,7 +86,7 @@ def main(args):
     def make_dataset(is_train, cached=None):
         _transform = transform_train if is_train else transform_test
 
-        if 'kinetics' in args.data_path.lower():
+        if 'kinetics' in args.data_path.lower() or 'finetune' in args.data_path.lower():
             return Kinetics400(
                 traindir if is_train else valdir,
                 frames_per_clip=args.clip_len,

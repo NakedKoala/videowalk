@@ -174,8 +174,8 @@ def test(loader, model, args):
                 _maps += [heatmap, lblmap, heatmap_prob]
                 maps.append(_maps)
 
-                if args.visdom:
-                    [vis.image(np.uint8(_m).transpose(2, 0, 1)) for _m in _maps]
+                # if args.visdom:
+                #     [vis.image(np.uint8(_m).transpose(2, 0, 1)) for _m in _maps]
 
             if len(keypts) > 0:
                 coordpath = os.path.join(args.save_path, str(vid_idx) + '.dat')
@@ -198,12 +198,12 @@ if __name__ == '__main__':
     print('Context Length:', args.videoLen, 'Image Size:', args.imgSize)
     print('Arguments', args)
 
-    vis = None
-    if args.visdom:
-        import visdom
-        import wandb
-        vis = visdom.Visdom(server=args.visdom_server, port=8095, env='main_davis_viz1'); vis.close()
-        wandb.init(project='palindromes', group='test_online')
-        vis.close()
+    # vis = None
+    # if args.visdom:
+    #     import visdom
+    import wandb
+        # vis = visdom.Visdom(server=args.visdom_server, port=8095, env='main_davis_viz1'); vis.close()
+    wandb.init(project='palindromes', group='test_online')
+        # vis.close()
 
     main(args, vis)

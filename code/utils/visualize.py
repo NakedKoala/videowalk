@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 import cv2
 import imageio as io
 
-import visdom
+# import visdom
 import time
 import PIL
 import torchvision
@@ -90,11 +90,11 @@ class Visualize(object):
     def __init__(self, args):
 
         self._env_name = args.name
-        self.vis = visdom.Visdom(
-            port=args.port,
-            server='http://%s' % args.server,
-            env=self._env_name,
-        )
+        # self.vis = visdom.Visdom(
+        #     port=args.port,
+        #     server='http://%s' % args.server,
+        #     env=self._env_name,
+        # )
         self.args = args
 
         self._init = False
